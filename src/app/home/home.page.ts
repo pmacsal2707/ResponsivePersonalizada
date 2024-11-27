@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  cars: any;
+
+  constructor(private httpClient: HttpClient) {
+    this.cars = this.httpClient.get('https://raw.githubusercontent.com/pmacsal2707/DatosJSON/refs/heads/master/datos.json');
+  }
 
 }

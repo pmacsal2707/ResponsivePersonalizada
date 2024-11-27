@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Vehículos Disponibles
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ 
+<ion-content [fullscreen]="true" >
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let car of cars | async" size-xl="2" size-lg="2" size-md="4" size-sm="6" size-xs="12">
+        <ion-card>
+          <ion-card-header class="ion-text-center">
+            <ion-card-title>{{ car.fabricante }} - {{ car.modelo }}</ion-card-title>
+          </ion-card-header>
+          
+          <ion-card-content>
+            <div class="ion-text-center">
+              <img [src]="car.imagen" class="car-image">
+            </div>
+            <p><strong>Año:</strong> {{ car.anio }}</p>
+            <p><strong>Color:</strong> {{ car.color }}</p>
+            <p><strong>VIN:</strong> {{ car.vin }}</p>
+            <p><strong>Kilometraje:</strong> {{ car.kilometraje }} km</p>
+            <p><strong>Estado:</strong> {{ car.estado }}</p>
+            <p><strong>Tipo de Motor:</strong> {{ car.tipo_motor }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
