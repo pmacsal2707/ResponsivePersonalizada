@@ -7,6 +7,7 @@
 </ion-header>
  
 <ion-content [fullscreen]="true" >
+  <ion-input placeholder="Introduce los datos del filtro"></ion-input>
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let car of cars | async" size-xl="2" size-lg="2" size-md="4" size-sm="6" size-xs="12">
@@ -15,7 +16,7 @@
             <ion-card-title>{{ car.fabricante }} - {{ car.modelo }}</ion-card-title>
           </ion-card-header>
           
-          <ion-card-content>
+          <ion-card-content>  
             <div class="ion-text-center">
               <img [src]="car.imagen" class="car-image">
             </div>
