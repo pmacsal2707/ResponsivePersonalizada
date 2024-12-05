@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 export class HomePage {
 
   cars: any;
+  filtro: string = '';
 
   constructor(private httpClient: HttpClient) {
     this.cars = this.httpClient.get('https://raw.githubusercontent.com/pmacsal2707/DatosJSON/refs/heads/master/datos.json');

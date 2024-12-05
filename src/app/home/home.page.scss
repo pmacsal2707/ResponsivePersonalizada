@@ -25,3 +25,144 @@
 #container a {
   text-decoration: none;
 }
+
+/* home.page.scss */
+
+/* Estilos para la imagen del coche dentro del ion-card */
+.car-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* Estilo general para ion-card */
+ion-card {
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre los cards (en dispositivos de escritorio) */
+ion-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos dentro de ion-card */
+ion-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilo del ion-input (filtro de búsqueda) */
+ion-input {
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+/* Estilos para el header */
+ion-header {
+  background-color: #3880ff; /* Color del header */
+  color: white;
+}
+
+ion-toolbar {
+  background-color: #3880ff;
+}
+
+ion-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Estilos responsivos: */
+@media (min-width: 768px) {
+  ion-card-title {
+    font-size: 24px;
+  }
+
+  ion-card {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  ion-card-title {
+    font-size: 30px;
+  }
+
+  ion-card {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+/* Mostrar los elementos solo en orientación vertical */
+@media (orientation: portrait) {
+  .landscape-only {
+    display: none;
+  }
+}
+
+/* Mostrar los elementos solo en orientación horizontal */
+@media (orientation: landscape) {
+  .portrait-only {
+    display: none;
+  }
+}
+
+/* Estilo para el grid */
+ion-grid {
+  padding: 10px;
+}
+
+ion-col {
+  display: flex;
+  justify-content: center;
+}
+
+/* Mejoras visuales para el ion-card-header */
+ion-card-header {
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 8px 8px 0 0;
+}
+
+ion-card-content {
+  background-color: #fafafa;
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Estilos adicionales para los detalles del coche */
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+strong {
+  color: #333;
+}
+
+/* Filtro de búsqueda */
+ion-input {
+  margin: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
